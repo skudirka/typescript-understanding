@@ -1,17 +1,21 @@
-let userInput:unknown;
-let userName:string;
+(function(){
 
-userInput = 5;
-userInput = 'Max';
-if(typeof userInput==='string'){
-    userName = userInput;
-}
+    let userInput:unknown;
+    let userName:string;
 
-const generateError = (message:string, code:number):never => {
-    throw {
-        message,
-        errorCode: code
+    userInput = 5;
+    userInput = 'Max';
+    if(typeof userInput==='string'){
+        userName = userInput;
     }
-}
 
-generateError('An error occurred!', 500);
+    const generateError = (message:string, code:number):never => {
+        throw {
+            message,
+            errorCode: code
+        }
+    }
+
+    generateError('An error occurred!', 500);
+
+})();
